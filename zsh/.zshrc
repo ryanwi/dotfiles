@@ -85,5 +85,8 @@ if [ -f '/Users/ryan/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryan
 #export PATH="/opt/homebrew/opt/node@12/bin:$PATH"
 #export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
 
+# point python to python3
+export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
