@@ -1,3 +1,4 @@
+brew 'zsh-completions'
 brew 'jq'
 brew 'node'
 brew 'readline'
