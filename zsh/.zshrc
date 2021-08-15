@@ -36,16 +36,15 @@ alias gkl="gcloud container clusters list"
 alias gkc="gcloud container clusters get-credentials $1"
 
 # Kubernetes
-source <(kubectl completion zsh)
-alias k="kubectl"
-complete -F __start_kubectl k
+#source <(kubectl completion zsh)
+#alias k="kubectl"
+#complete -F __start_kubectl k
+#source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+#PROMPT='$(kube_ps1)'$PROMPT
  
 # prompt
 source ~/dev/zsh-git-prompt/zshrc.sh
 PROMPT='%B%~%b$(git_super_status)%# '
-
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-PROMPT='$(kube_ps1)'$PROMPT
 
 # SSH to a specific Google Cloud Instance
 gssh () {
