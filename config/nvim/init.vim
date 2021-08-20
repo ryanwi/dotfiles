@@ -26,6 +26,9 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 
@@ -38,3 +41,4 @@ if $TERM =~ '256'
   set t_Co=256
 endif
 
+nnoremap <silent> <C-f> :Files<CR>
