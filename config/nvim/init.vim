@@ -1,8 +1,8 @@
-
 " ensure vim-plug is installed and then load it
 call functions#PlugLoad()
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'preservim/nerdtree'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rake', { 'for': 'ruby' }
@@ -30,6 +30,9 @@ set number
 set relativenumber
 set rnu
 
+" Always show the status line at the bottom, even if you only have one window open.
+set laststatus=2
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
@@ -44,3 +47,17 @@ if $TERM =~ '256'
   set termguicolors " true colors
   set t_Co=256
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
+"
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
