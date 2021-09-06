@@ -1,4 +1,6 @@
 brew 'zsh-completions'
+brew 'bat'
+brew 'git-delta'
 brew 'jq'
 brew 'node'
 brew 'readline'
