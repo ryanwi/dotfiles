@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 " Other languages
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -39,6 +40,9 @@ let mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Space bar to clear search
+nmap <space> :let @/ = ""<CR>
 
 " CTRL-f for fzf
 nnoremap <silent> <C-f> :Files<CR>
