@@ -33,6 +33,7 @@ export DOCKER_BUILDKIT=1
 alias 'gs=git status'
 alias 'gd=git diff'
 alias 'gl=git log --oneline'
+alias 'gb=git branch --sort=-committerdate'
 
 # Generic gcloud Aliases
 alias gcels="gcloud compute instances list"
