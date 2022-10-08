@@ -56,17 +56,18 @@ alias gkc="gcloud container clusters get-credentials $1"
 source ~/dev/zsh-git-prompt/zshrc.sh
 PROMPT='%B%~%b$(git_super_status)%# '
 
+# gcloud
 # SSH to a specific Google Cloud Instance
-gssh () {
-  gcloud compute ssh --internal-ip --zone "$(gcloud compute instances list --format="value(ZONE)" --filter="name=$1")" $1
-}
+#gssh () {
+#  gcloud compute ssh --internal-ip --zone "$(gcloud compute instances list --format="value(ZONE)" --filter="name=$1")" $1
+#}
 # SSH to the first server that matches the name
-tssh () {
-  compute_instance_info=$(gcloud compute instances list --format="value(NAME,ZONE)" --filter="name:$1" | head -n 1)
-  compute_instance_name="$(echo -n $compute_instance_info | awk '{print $1}')"
-  compute_instance_zone="$(echo -n $compute_instance_info | awk '{print $2}')"
-  gcloud compute ssh --internal-ip --zone "$compute_instance_zone" "$compute_instance_name"
-}
+#tssh () {
+#  compute_instance_info=$(gcloud compute instances list --format="value(NAME,ZONE)" --filter="name:$1" | head -n 1)
+#  compute_instance_name="$(echo -n $compute_instance_info | awk '{print $1}')"
+#  compute_instance_zone="$(echo -n $compute_instance_info | awk '{print $2}')"
+#  gcloud compute ssh --internal-ip --zone "$compute_instance_zone" "$compute_instance_name"
+#}
  
 # GitHub CLI
 if [ -f ~/.github ]; then
