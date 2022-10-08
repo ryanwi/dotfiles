@@ -13,6 +13,7 @@ Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
+Plug 'ggandor/leap.nvim'
 
 " Other languages
 Plug 'ekalinin/Dockerfile.vim'
