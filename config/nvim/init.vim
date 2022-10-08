@@ -2,6 +2,7 @@
 call functions#PlugLoad()
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'tpope/vim-sensible'
 Plug 'preservim/nerdtree'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-ruby/vim-ruby'
