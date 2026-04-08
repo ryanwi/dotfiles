@@ -13,7 +13,7 @@ Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
-Plug 'ggandor/leap.nvim'
+Plug 'https://codeberg.org/andyg/leap.nvim'
 
 " Other languages
 Plug 'ekalinin/Dockerfile.vim'
@@ -22,6 +22,8 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'kdheepak/lazygit.nvim'
 
 call plug#end()
 
@@ -48,6 +50,9 @@ nmap <space> :let @/ = ""<CR>
 
 " CTRL-f for fzf
 nnoremap <silent> <C-f> :Files<CR>
+
+" lazygit
+nnoremap <leader>lg :LazyGit<CR>
 
 if $TERM =~ '256'
   set termguicolors " true colors
